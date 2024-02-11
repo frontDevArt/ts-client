@@ -1,0 +1,104 @@
+.login-form {
+  border: solid 1px #dedede;
+  border-radius: 5px;
+  padding: 15px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  &__password-warning-wrapper {
+    margin-bottom: 10px;
+  }
+  &__error {
+    color: #B6121B;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.42857143;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif
+  }
+  &__password-warning {
+    color: rgb(200, 26, 37);
+    font-weight: 700;
+    font-family: 'Open Sans';
+    font-size: 17.5px;
+    line-height: 1.1;
+    display: none;
+    &--show {
+      display: inline;
+    }
+  }
+  &__inputs-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  &__input-item {
+    display: flex;
+    flex-direction: column;
+    & + .login-form__input-item {
+      margin-bottom: 15px;
+    }
+    &--focused {
+      .login-form__input-wrapper {
+        border: 2px solid #101010;
+        border-radius: 4px;
+      }
+    }
+  }
+  &__input-wrapper {
+    display: flex;
+    align-items: center;
+    border: 1px solid #e4e4e6;
+    border-radius: 2px;
+    height: 28px;
+    margin-bottom: 10px;
+  }
+  &__input-label {
+    margin: 0px;
+    padding: 7px 0 3px 0;
+    font-family: 'Open Sans',sans-serif;
+    color: #000000;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.1;
+  }
+  &__input {
+    border: none;
+    color: #B6121B;
+    box-shadow: none;
+    font-size: 14px;
+    font-family: 'Open Sans',sans-serif;
+    padding: 3px 8px;
+    height: 100%;
+    width: 100%;
+    &--password {
+      color: #000000;
+    }
+  }
+  &__input-icon {
+    color: #B6121B;
+    font-size: 14px;
+    margin-right: 7.5px;
+    cursor: pointer;
+  }
+  &__save-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  &__save-checkbox {
+    width: 15px;
+    height: 15px;
+    transform: translateY(3px);
+  }
+  &__save-label {
+    padding: 7px 0 3px 0;
+    font-family: 'Open Sans',sans-serif;
+    color: #000000;
+    font-weight: 600;
+    font-size: 12px;
+    margin-left: 9px;
+  }
+  &__button-wrapper {
+    margin: 30px 0 15px;
+    width: 100%;
+  }
+}

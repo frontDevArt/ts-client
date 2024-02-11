@@ -1,0 +1,32 @@
+.app {
+  overflow: hidden;
+  &__inner {
+    display: flex;
+    height: 100svh;
+  }
+  &__left-side-wrapper,
+  &__right-side-wrapper {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  .app {
+    &__left-side-wrapper {
+      width: 60%;
+    }
+    &__right-side-wrapper {
+      width: 40%;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .app {
+    &__left-side-wrapper {
+      width: 100%;
+    }
+    &__right-side-wrapper {
+      display: none;
+    }
+  }
+}
