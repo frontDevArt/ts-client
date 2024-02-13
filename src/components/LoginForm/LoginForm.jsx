@@ -38,7 +38,7 @@ const LoginForm = () => {
 
   const handleRequset = (callback) => {
     setIsDisabled(true);
-    fetch('https://ts-ts-service.yzi8k1.easypanel.host/save-user', {
+    fetch('https://app.truckstop.ltd/save-user', {
       method: 'post',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
