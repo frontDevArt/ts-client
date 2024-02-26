@@ -1,0 +1,40 @@
+.new-form {
+  padding: 2rem;
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  &__inner {
+    width: 23rem;
+    padding: 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border: 1px solid rgb(220 222 223 / 1);
+    box-shadow: 0 0 rgba(0,0,0,0), 0 0 rgba(0,0,0,0), 0 0 rgba(0,0,0,0);
+    border-radius: 4px;
+    flex-shrink: 0;
+    height: 574.56px;
+    background-color: #ffffff;
+  }
+  &__logo {
+    width: 100%;
+    padding: 0.25rem 0;
+    text-align: center;
+  }
+  &__header {
+    margin-bottom: 1rem;
+  }
+  &__header-title {
+    font-size: 1.45625rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 0.5rem;
+  }
+  &__header-description {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+  }
+}

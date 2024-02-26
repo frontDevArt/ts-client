@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './components/App/App';
+import NewApp from './components/NewApp/NewApp';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -18,6 +19,12 @@ const router = createBrowserRouter([
     path: '/Signin',
     element: (
       <App withooutQuery />
+    ),
+  },
+  {
+    path: 'as/authorize',
+    element: (
+      <NewApp />
     ),
   },
 ]);

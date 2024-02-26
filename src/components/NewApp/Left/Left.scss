@@ -1,0 +1,14 @@
+.left {
+  width: 100%;
+  height: 100%;
+  background-color: var(--secondary-10, #f4f5f5);
+  &__new-form-wrapper {
+    height: 100%;
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary-10, #f4f5f5);
+  }
+}

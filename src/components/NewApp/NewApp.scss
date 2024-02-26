@@ -1,0 +1,29 @@
+.new-app {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  height: 100vh;
+  color: var(--primatives-black, #000);
+  font-family: Inter, Arial, sans-serif;
+  &__left-wrapper {
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__right-wrapper {
+    position: relative;
+    flex-basis: 50%;
+    min-width: 450px;
+    background-color: #394857;
+    background-image: url('./Right/images/ts_wallpaper_openroad1_bw 2.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 2.25rem 3rem;
+    @media (max-width: 900px) {
+      display: none;
+    }
+  }
+}
