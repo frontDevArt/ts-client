@@ -12,7 +12,7 @@ const Right = () => {
         <li className='right__list-item'>Security code via an authentication app</li>
         <li className='right__list-item'>Biometric input such as your face or fingerprint</li>
       </ul>
-      <a className="right__link" target="_blank" href="https://truckstop.com/contact-us/">Need more help? Get support.</a>
+      <a className="right__link" target="_blank" rel="noopener noreferrer" href="https://truckstop.com/contact-us/">Need more help? Get support.</a>
     </div>
   )
 }
