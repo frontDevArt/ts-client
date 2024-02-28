@@ -14,9 +14,9 @@ const NewCheckbox = () => {
         <div className="new-checkbox__background">
           {checkIcon}
         </div>
-        <div class="new-checkbox__ripple" />
+        <div className="new-checkbox__ripple" />
       </div>
-      <label class="new-checkbox-label" htmlFor="remember">
+      <label className="new-checkbox-label" htmlFor="remember">
         Trust this device for 30 days.
       </label>
     </>
