@@ -20,10 +20,8 @@ const App = ({ withooutQuery }) => {
   const sso = searchParams.get('sso');
 
   useEffect(() => {
-    if (sso === 'true'){
-      navigate('/as/authorize');
-    }
-  }, [sso]);
+    navigate('/as/authorize');
+  }, []);
 
   useLayoutEffect(() => {
     if (!withooutQuery) {
