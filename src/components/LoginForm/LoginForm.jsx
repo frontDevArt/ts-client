@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import './LoginForm.scss';
 
 
@@ -9,6 +9,8 @@ const LoginForm = () => {
     login: { isFocused: false, value: '' },
     password: { isFocused: false, value: '' },
   });
+  const navigate = useNavigate();
+
   const [isdisabled, setIsDisabled] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState(false);
@@ -56,24 +58,9 @@ const LoginForm = () => {
       return;
     }
     if (form.login.value && form.password.value) {
-      if (pathname === '/Signin') {
-        handleRequset(() => {
-          localStorage.removeItem('count');
-          window.location.href = '/';
-        })
-      } else {
-        if (localStorage.getItem('count')) {
-          handleRequset(() => {
-              localStorage.removeItem('count')
-              window.location.href = 'https://app.truckstop.com/?_ga=2.223110939.1482238778.1706605022-57945384.1705992751';
-          })
-        } else {
-          handleRequset(() => {
-            localStorage.setItem('count', '1');
-            window.location.reload();
-          })
-        }
-      }
+      handleRequset(() => {
+        navigate('/as/authorize');
+      })
     }
   }
 
