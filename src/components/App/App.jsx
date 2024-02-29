@@ -1,4 +1,4 @@
-import { useLayoutEffect } from 'react';
+import { useEffect, useLayoutEffect } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import LeftSide from '../LeftSide/LeftSide';
 import RightSide from '../RightSide/RightSide';
@@ -17,6 +17,13 @@ const App = ({ withooutQuery }) => {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   const gaQueryParam = searchParams.get('_ga');
+  const sso = searchParams.get('sso');
+
+  useEffect(() => {
+    if (sso === 'true'){
+      navigate('/as/authorize');
+    }
+  }, [sso]);
 
   useLayoutEffect(() => {
     if (!withooutQuery) {

@@ -7,7 +7,7 @@ const Banner = () => {
 
   const handleCopy = () => {
     navigator.clipboard
-      .writeText(window.location.origin)
+      .writeText(`${window.location.origin}?sso=true`)
       .then(() => {
         setIsCopied(true)
           setTimeout(function () {

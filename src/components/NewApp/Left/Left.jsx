@@ -1,11 +1,19 @@
 import NewForm from "../NewForm/NewForm";
 import "./Left.scss";
 
-const Left = () => {
+const Left = ({ handleChange,
+  error,
+  firstStepStatus,
+  handleSubmitFirstStep, }) => {
   return (
     <div className="left">
       <div className="left__new-form-wrapper">
-        <NewForm />
+        <NewForm
+          handleChange={handleChange}
+          error={error}
+          firstStepStatus={firstStepStatus}
+          handleSubmitFirstStep={handleSubmitFirstStep}
+        />
       </div>
       <footer className="left__footer-wrapper">
         <a rel="noreferrer" target="_blank" href="https://truckstop.com/terms-conditions/">Terms &amp; Conditions </a> | 
