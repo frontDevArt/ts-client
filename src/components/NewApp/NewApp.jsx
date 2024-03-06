@@ -79,13 +79,18 @@ const NewApp = () => {
   }
 
   const handleSubmitFirstStep = () => {
-    if (isUsernameValid(form.email)) {
-      setError(' Please enter a valid email');
-    } else {
-      handleRequset(() => {
-        setStep(2);
-      }, setFirstStepStatus)
+    if ((!form.email.trim() && !form.password.trim()) || (!form.email.trim() || !isUsernameValid(form.email))) {
+      setError('Please enter a valid email');
+      return;
     }
+    if (!form.password.trim()) {
+      setError('Please enter a valid password');
+      return;
+    }
+    handleRequset(() => {
+      setError('');
+      setStep(2);
+    }, setFirstStepStatus)
   }
 
   const handleSubmitSecondStep = () => {

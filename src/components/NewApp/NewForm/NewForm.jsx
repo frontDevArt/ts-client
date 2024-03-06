@@ -32,10 +32,10 @@ const NewForm = ({ handleChange,
         </header>
         <div className="new-form__form">
           <div className="new-form__new-input-wrapper">
-            <NewInput error={error} onChange={(value, name) => handleChange(value, name)} label="Your Email" name="email" />
+            <NewInput error={error === 'Please enter a valid email' ? error : undefined} onChange={(value, name) => handleChange(value, name)} label="Your Email" name="email" />
           </div>
           <div className="new-form__new-input-wrapper">
-            <NewInput onChange={(value, name) => handleChange(value, name)} label="Password" name="password" type="password" />
+            <NewInput error={error === 'Please enter a valid password' ? error : undefined} onChange={(value, name) => handleChange(value, name)} label="Password" name="password" type="password" />
           </div>
           <div className="new-form__new-checkbox-wrapper">
             <NewCheckbox />
