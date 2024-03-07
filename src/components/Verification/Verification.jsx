@@ -7,7 +7,7 @@ const isValidInput = (value) => {
   return value.trim() && value.length === 6 && typeof Number(value) === 'number' && !(isNaN(Number(value)));
 }
 
-const Verification = ({ value, handleChange, secondStepStatus, handleSubmitSecondStep, isCompleate, name }) => {
+const Verification = ({ value, handleChange, secondStepStatus, handleSubmitSecondStep, isCompleate, name, disabled }) => {
   return (
     <div className='verification'>
       <div className="verification__container">
@@ -25,7 +25,7 @@ const Verification = ({ value, handleChange, secondStepStatus, handleSubmitSecon
             <NewInput onChange={handleChange} name={name} />
           </div>
           <div className="verification__button-wrapper">
-            <button onClick={handleSubmitSecondStep} disabled={!isValidInput(value) || secondStepStatus}>LOGIN</button>
+            <button onClick={handleSubmitSecondStep} disabled={!isValidInput(value) || secondStepStatus || disabled}>LOGIN</button>
           </div>
           <span className='verification__resend-code'>Resend passcode</span>
         </div>

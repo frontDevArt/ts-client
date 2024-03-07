@@ -74,7 +74,6 @@ const NewApp = () => {
   }
 
   const handleChange = (value, name) => {
-    console.log(value, name);
     setForm(prev => ({ ...prev, [name]: value }))
   }
 
@@ -139,6 +138,7 @@ const NewApp = () => {
           value={form.changePhone}
           name="changePhone"
           isCompleate
+          disabled={form.phone === form.changePhone}
         />
       )}
     </>
