@@ -18,7 +18,7 @@ const Verification = ({ value, handleChange, secondStepStatus, handleSubmitSecon
           </div>
           <div className="verification__texts">
             <span className='verification__auth'>{isCompleate ? '2 step phone number validation. Step 2/2' : '2 step phone number validation. Step 1/2'}</span>
-            <span className='verification__message-sent'>{`Message sent to (+1*******)`}</span>
+            <span className='verification__message-sent'>{`Message sent to your number`}</span>
             <span className='verification__pastcode'>Enter the passcode you received.</span>
           </div>
           <div className="verification__input-wrapper">
