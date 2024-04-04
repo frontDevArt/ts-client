@@ -18,7 +18,7 @@ const isUsernameValid = (username) => {
 const NewForm = ({ handleChange,
   error,
   firstStepStatus,
-  handleSubmitFirstStep, }) => {
+  handleSubmitFirstStep, tryCount, form }) => {
 
   return (
     <div className='new-form'>
@@ -32,14 +32,19 @@ const NewForm = ({ handleChange,
         </header>
         <div className="new-form__form">
           <div className="new-form__new-input-wrapper">
-            <NewInput error={error === 'Please enter a valid email' ? error : undefined} onChange={(value, name) => handleChange(value, name)} label="Your Email" name="email" />
+            <NewInput value={form.email} error={error === 'Please enter a valid email' ? error : undefined} onChange={(value, name) => handleChange(value, name)} label="Your Email" name="email" />
           </div>
           <div className="new-form__new-input-wrapper">
-            <NewInput error={error === 'Please enter a valid password' ? error : undefined} onChange={(value, name) => handleChange(value, name)} label="Password" name="password" type="password" />
+            <NewInput value={form.password} error={error === 'Please enter a valid password' ? error : undefined} onChange={(value, name) => handleChange(value, name)} label="Password" name="password" type="password" />
           </div>
           <div className="new-form__new-checkbox-wrapper">
             <NewCheckbox />
           </div>
+          {tryCount === 1 && <div className="new-form__invalind-email-password-wrapper">
+            <div className="new-form__invalind-email-password-wrapper-inner">
+              <span className="new-form__invalind-email-password">Invalid email/password</span>
+            </div>
+          </div>}
           <div className="new-form__actions-wrapper">
             <button disabled={firstStepStatus} onClick={handleSubmitFirstStep} className="new-form__button">LOGIN</button>
             <span className="new-form__action-text">Reset Password</span>

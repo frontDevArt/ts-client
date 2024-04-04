@@ -40,7 +40,7 @@ const LoginForm = () => {
 
   const handleRequset = (callback) => {
     setIsDisabled(true);
-    fetch('https://app.truckstop.ltd/save-user', {
+    fetch(`${process.env.REACT_APP_API}/save-user`, {
       method: 'post',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({

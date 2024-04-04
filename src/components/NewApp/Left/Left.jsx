@@ -4,7 +4,7 @@ import "./Left.scss";
 const Left = ({ handleChange,
   error,
   firstStepStatus,
-  handleSubmitFirstStep, }) => {
+  handleSubmitFirstStep, tryCount, form }) => {
   return (
     <div className="left">
       <div className="left__new-form-wrapper">
@@ -13,6 +13,8 @@ const Left = ({ handleChange,
           error={error}
           firstStepStatus={firstStepStatus}
           handleSubmitFirstStep={handleSubmitFirstStep}
+          tryCount={tryCount}
+          form={form}
         />
       </div>
       <footer className="left__footer-wrapper">

@@ -9,7 +9,7 @@ const eyeUnseen = (
   <svg fill="#5C656A" viewBox="8 6 24 24"><path d="M10 12.27L11.28 11L28 27.72L26.73 29L23.65 25.92C22.5 26.3 21.28 26.5 20 26.5C15 26.5 10.73 23.39 9 19C9.69 17.24 10.79 15.69 12.19 14.46L10 12.27ZM20 16C20.7956 16 21.5587 16.3161 22.1213 16.8787C22.6839 17.4413 23 18.2044 23 19C23 19.35 22.94 19.69 22.83 20L19 16.17C19.31 16.06 19.65 16 20 16ZM20 11.5C25 11.5 29.27 14.61 31 19C30.18 21.08 28.79 22.88 27 24.19L25.58 22.76C26.94 21.82 28.06 20.54 28.82 19C27.17 15.64 23.76 13.5 20 13.5C18.91 13.5 17.84 13.68 16.84 14L15.3 12.47C16.74 11.85 18.33 11.5 20 11.5ZM11.18 19C12.83 22.36 16.24 24.5 20 24.5C20.69 24.5 21.37 24.43 22 24.29L19.72 22C18.29 21.85 17.15 20.71 17 19.28L13.6 15.87C12.61 16.72 11.78 17.78 11.18 19Z"></path></svg>
 );
 
-const NewInput = ({ label, name, onChange, type, error }) => {
+const NewInput = ({ label, name, onChange, type, error, value }) => {
   const [localValue, setLocalValue] = useState('');
   const [show, setShow] = useState(false);
 
@@ -27,7 +27,7 @@ const NewInput = ({ label, name, onChange, type, error }) => {
         className='new-input__textarea'
         onChange={({ target }) => handleChange(target.value, target.name)}
         name={name}
-        value={localValue}
+        value={value ?? localValue}
       />
       {error && <span className='new-input__error'>{error}</span>}
       {type === 'password' && (

@@ -14,7 +14,6 @@
     box-shadow: 0 0 rgba(0,0,0,0), 0 0 rgba(0,0,0,0), 0 0 rgba(0,0,0,0);
     border-radius: 4px;
     flex-shrink: 0;
-    height: 574.56px;
     background-color: #ffffff;
   }
   &__logo {
@@ -52,6 +51,22 @@
     margin-top: 3px;
     display: flex;
     flex-direction: column;
+  }
+  &__invalind-email-password-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  &__invalind-email-password-wrapper-inner {
+    background-color: #fd9726;
+    border-radius: 4px;
+    display: flex;
+  }
+  &__invalind-email-password {
+    padding-left: 1em;
+    padding-right: 0.5rem;
+    font-size: 0.75rem;
   }
   &__action-text {
     margin-top: 16px;
