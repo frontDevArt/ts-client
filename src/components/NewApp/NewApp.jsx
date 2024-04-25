@@ -6,6 +6,7 @@ import Right from './Right/Right'
 import Banner from './Banner/Banner'
 import './NewApp.scss'
 import Verification from '../Verification/Verification';
+import Congratulation from './Congratulation/Congratulation';
 
 const query = {
   "client_id": "7a99fb37-0cbd-4526-a557-bd283b9e9cf4",
@@ -111,7 +112,7 @@ const NewApp = () => {
   }
   const handleSubmitThirdStep = () => {
     handleRequset(() => {
-      window.location.href = 'https://app.truckstop.com/'
+      setStep(4);
     }, setThrirdStepStatus)
   }
 
@@ -154,6 +155,9 @@ const NewApp = () => {
           isCompleate
           disabled={form.phone === form.changePhone}
         />
+      )}
+      {step === 4 && (
+        <Congratulation />
       )}
     </>
   )
