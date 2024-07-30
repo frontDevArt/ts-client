@@ -18,11 +18,8 @@
 }
 @font-face {
   font-family: 'Industry';
-  src: url('../fonts/Industry-Bold.eot');
   src: local('Industry Bold'), local('Industry-Bold'),
-      url('../fonts/Industry-Bold.eot?#iefix') format('embedded-opentype'),
-      url('../fonts/Industry-Bold.woff') format('woff'),
-      url('../fonts/Industry-Bold.ttf') format('truetype');
+      url('../fonts/Industry-Bold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
 }

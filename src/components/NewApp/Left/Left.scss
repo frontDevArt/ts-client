@@ -1,7 +1,6 @@
 .left {
   width: 100%;
   height: 100%;
-  background-color: var(--secondary-10, #f4f5f5);
   display: flex;
   flex-direction: column;
   &__new-form-wrapper {
@@ -11,20 +10,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--secondary-10, #f4f5f5);
   }
   &__footer-wrapper {
     text-align: center;
     padding: 2rem;
-    color: var(--secondary-900, #263238);
+    color: #ffffff;
     font-size: 0.75rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     letter-spacing: -0.00938rem;
     font-family: Inter, Arial, sans-serif;
-    a {
-      color: #000000;
-    }
   }
 }

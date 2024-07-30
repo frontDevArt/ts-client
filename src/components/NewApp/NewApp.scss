@@ -16,11 +16,8 @@
     position: relative;
     flex-basis: 50%;
     min-width: 450px;
-    background-color: #394857;
-    background-image: url('./Right/images/ts_wallpaper_openroad1_bw 2.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background: linear-gradient(0deg, rgba(38, 50, 56, 0.24), rgba(38, 50, 56, 0.24)), linear-gradient(0deg, rgba(0, 0, 0, 0.24), rgba(0, 0, 0, 0.24));
+    background-blend-mode: multiply;
     padding: 2.25rem 3rem;
     @media (max-width: 900px) {
       display: none;

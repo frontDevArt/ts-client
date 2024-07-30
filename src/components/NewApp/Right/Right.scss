@@ -5,38 +5,87 @@
   font-family: Inter, Arial, sans-serif;
   &__title {
     font-family: Industry, Arial, sans-serif;
-    font-size: 2rem;
+    font-size: 36px;
     font-style: normal;
     font-weight: 700;
-    line-height: normal;
-    letter-spacing: 0.04688rem;
+    line-height: 43.2px;
+    letter-spacing: 0.75px;
     text-transform: uppercase;
-    margin: 1rem 0;
+    margin-top: 14px;
   }
-  &__text {
+  &__divider {
+    width: 100%;
+    border-top: 1px solid #ffffff;
+    opacity: 10%;
+    margin-top: 2.25rem;
+    margin-bottom: 2.25rem;
+  }
+  &__subheading {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 14.52px;
+    letter-spacing: 0.36em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+  }
+  &__tsx-body-1 {
     font-size: 1rem;
     font-style: normal;
     font-weight: 400;
     line-height: 1.5rem;
-    letter-spacing: 0.033rem;
-    margin-bottom: 1.2rem;
-    &--bold {
-      font-weight: bolder;
-    }
+    letter-spacing: 0.00938rem;
+    margin-bottom: 1rem;
   }
   &__list {
     list-style: initial;
     margin-left: 1.5rem;
-    margin-bottom: 1rem;
     color: #fff;
-    font-size: 1rem;
+    font-size: 16px;
     font-style: normal;
     font-weight: 700;
-    line-height: 1.5rem;
-    letter-spacing: 0.00938rem;
+    line-height: 24px;
+    letter-spacing: 0.15000000596046448px;
+    margin-bottom: 1rem;
   }
   &__link {
-    text-decoration: underline;
-    cursor: pointer;
+    color: var(--primatives-white, #fff);
+    text-decoration-line: underline;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  &__card {
+    padding: 16px 16px 20px 16px;
+    gap: 8px;
+    border-radius: 10px 10px 0px 10px;
+    background: #394857;
+    margin-bottom: 12px;
+  }
+  &__quote {
+    font-family: Industry, Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.15000000596046448px;
+    text-align: left;
+    font-feature-settings: normal;
+    font-variation-settings: normal;
+    -webkit-text-size-adjust: 100%;
+  }
+  &__quote-attribution {
+    font-family: Industry, Arial, sans-serif;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 19.2px;
+    text-align: right;
+    vertical-align: bottom;
+    margin-right: 8px;
+    width: 100%;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
   }
 }

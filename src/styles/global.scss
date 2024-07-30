@@ -1,6 +1,11 @@
 body {
   user-select: none;
   overflow: hidden;
+  background-image: url('./ts_login_bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  align-content: center;
 }
 .button {
   width: 100%;
@@ -24,4 +29,7 @@ body {
     max-width: 200px;
     background-color: #31b0d5;
   }
+}
+.flex {
+  display: flex;
 }
